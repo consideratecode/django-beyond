@@ -1,0 +1,23 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>{% block title %}My amazing Polls application{% endblock %}</title>
+    <link rel="stylesheet" type="text/css" href="{% static 'polls/style.css' %}" />
+</head>
+
+<body>
+    <div id="sidebar">
+        {% block sidebar %}
+        <ul>
+            <li><a href="/polls/">Polls</a></li>
+            <li><a href="/admin/">Admin</a></li>
+        </ul>
+        {% endblock %}
+    </div>
+
+    <div id="content">
+        {% block content %}{% endblock %}
+    </div>
+</body>
+</html>
