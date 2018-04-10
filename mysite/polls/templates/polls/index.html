@@ -1,30 +1,13 @@
-{% load static %}
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <link rel="stylesheet" href="style.css" />
-    <title>My amazing Polls application</title>
-    <link rel="stylesheet" type="text/css" href="{% static 'polls/style.css' %}" />
-</head>
+{% extends 'base.html' %}
+{% block content %}
 
-<body>
-    <div id="sidebar">
-        <ul>
-            <li><a href="/polls/">Polls</a></li>
-            <li><a href="/admin/">Admin</a></li>
-        </ul>
-    </div>
-
-    <div id="content">
-        {% if latest_question_list %}
-            <ul>
-            {% for question in latest_question_list %}
-                <li><a href="{% url 'polls:detail' question.id %}">{{ question.question_text }}</a></li>
-            {% endfor %}
-            </ul>
-        {% else %}
-            <p>No polls are available.</p>
-        {% endif %}
-    </div>
-</body>
-</html>
+{% if latest_question_list %}
+    <ul>
+    {% for question in latest_question_list %}
+        <li><a href="{% url 'polls:detail' question.id %}">{{ question.question_text }}</a></li>
+    {% endfor %}
+    </ul>
+{% else %}
+    <p>No polls are available.</p>
+{% endif %}
+{% endblock %}
