@@ -12,6 +12,13 @@
         <ul>
             <li><a href="/polls/">Polls</a></li>
             <li><a href="/admin/">Admin</a></li>
+            <li>
+            {% if user.is_authenticated %}
+                <a href="/accounts/logout/">Logout</a>
+            {% else %}
+                <a href="/accounts/login/">Login</a>
+            {% endif %}
+            </li>
         </ul>
         {% endblock %}
     </div>
