@@ -4,8 +4,9 @@ Django beyond the tutorial
 This repository complements a series of blog posts on <https://consideratecode.com>:
 
 * [Getting to know your Users - User Authentication with Django's built-in views](https://consideratecode.com/2018/03/05/django-authentication-views-login-logout/)
+* [Don’t repeat Yourself – Understanding Django Template Inheritance](https://consideratecode.com/2018/04/17/django-template-inheritance/)
 
-This repository is based on ithe Django project you build in the official
+This repository is based on the Django project you build in the official
 Django tutorial: the `mysite` project with the `polls` app.
 
 Installation
